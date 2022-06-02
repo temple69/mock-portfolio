@@ -1,0 +1,392 @@
+        * {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        
+        nav {
+            background-color: green;
+            height: 60px;
+            box-shadow: 2px 2px 6px 2px grey;
+        }
+        
+        nav h1 {
+            display: inline;
+            position: relative;
+            top: .6em;
+            left: 1em;
+            font-size: 1.8em;
+            color: yellow;
+        }
+        
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 3;
+        }
+        
+        .navigation {
+            display: flex;
+            list-style-type: none;
+            justify-content: flex-end;
+            width: 90%;
+            height: inherit;
+            position: relative;
+            bottom: .6em;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .navigation>li>a:hover,
+        .navigation>li>a:active,
+        .navigation>li>a.active {
+            color: yellow;
+        }
+        
+        .navigation>li {
+            padding-left: 3em;
+        }
+        
+        .navigation>li>a.active:after {
+            color: yellow;
+            content: '';
+            position: absolute;
+            width: 0px;
+            height: 10px;
+            border-left: 2vw solid transparent;
+            border-right: 2vw solid transparent;
+            border-top: 6vh solid green;
+            top: 30%;
+            margin-left: -50px;
+            transition: all .5s ease-in-out;
+        }
+        
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: max-content;
+            box-shadow: -2px 2px 6px inset gray;
+            position: relative;
+            top: 2em;
+            font-family: sans-serif;
+            padding-bottom: 2em;
+            border-radius: 10px;
+            margin: 0 2em;
+        }
+        
+        .photo {
+            height: 400px;
+            padding-left: 2em;
+            box-shadow: 2px 2px 4px 1px silver;
+            margin: 0 1.5em;
+            margin-top: 2em;
+            height: max-content;
+            padding-bottom: 1em;
+            background-color: white;
+        }
+        
+        .info {
+            padding-left: 5em;
+        }
+        
+        .photo h1 {
+            width: 300px;
+            color: rgb(69, 172, 69);
+            text-align: center;
+            font-size: 2em;
+        }
+        
+        .photo img {
+            height: 40vmin;
+            object-fit: cover;
+            padding-top: 1em;
+            border-radius: 50%;
+            padding-bottom: 2em;
+        }
+        
+        article {
+            padding-top: 1em;
+        }
+        
+        article>ul>li,
+        article>ol>li,
+        article>p {
+            padding-top: .5em;
+            line-height: 1.3em;
+            text-transform: capitalize;
+            width: 90%;
+        }
+        
+        article h2 {
+            color: rgb(69, 172, 69);
+        }
+        
+        .footer {
+            background-color: green;
+            position: relative;
+            top: 3em;
+            text-align: center;
+            height: 200px;
+        }
+        
+        .footer button {
+            background-color: rgba(25, 73, 25, .4);
+            height: 100px;
+            width: 300px;
+            color: white;
+            margin-top: 1em;
+            border: none;
+            font-size: 2em;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 0 3em;
+            padding-right: 3em;
+        }
+        
+        .footer button a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer p {
+            margin-top: 1em;
+            font-size: 1.5em;
+        }
+        /* Styling for contact page */
+        
+        .contactForm label {
+            display: block;
+            padding-top: 1em;
+            padding-bottom: .4em;
+            color: white;
+        }
+        
+        .contactForm>fieldset>input,
+        .contactForm>fieldset>textarea {
+            width: 95%;
+            resize: none;
+            padding-top: 1em;
+            background: transparent;
+            font-size: 1.3em;
+            color: white;
+        }
+        
+        .contactForm fieldset>input {
+            border: none;
+            border-bottom: 1px solid black;
+            margin-bottom: 1em;
+        }
+        
+        .contactForm>fieldset>h2 {
+            border: none;
+            text-align: center;
+            color: white;
+            padding: .6em 0;
+            ;
+        }
+        
+        .contactForm>fieldset>input:focus {
+            border: none;
+            border-bottom: 1px solid white;
+            border-top: none;
+            outline: none;
+        }
+        
+        .contactForm>fieldset>textarea:focus {
+            border: 1px solid white;
+            outline: none;
+            border-radius: 5px;
+        }
+        
+        .contactForm>fieldset {
+            border: 0;
+            box-shadow: 2px 2px 4px 1px grey;
+            border-radius: 10px;
+            background: linear-gradient(-45deg, rgb(23, 222, 23), green 50%, rgb(104, 104, 42));
+            background-color: rgb(9, 90, 9);
+            position: relative;
+            top: 2em;
+            padding: 0 2em 1em 2em;
+        }
+        
+        .contactForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Styling for contact page ends */
+        /* Styling for registration page  begins*/
+        
+        .registerForm {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 0 5em;
+            background: linear-gradient(-45deg, rgb(23, 222, 23), green 50%, rgb(104, 104, 42));
+            box-shadow: 2px 2px 6px 1px inset grey;
+            padding-bottom: 1em;
+            height: max-content;
+            position: relative;
+            top: 2em;
+            border-radius: 20px;
+        }
+        
+        .registerForm fieldset:nth-child(even) {
+            padding-left: 8em;
+        }
+        
+        .registerForm fieldset {
+            display: grid;
+            border: 0;
+            box-sizing: border-box;
+        }
+        
+        .registerForm fieldset input {
+            border: 0;
+            border-bottom: 1px ridge black;
+            width: 70%;
+            background-color: transparent;
+            font-size: 1.3em;
+            transition: all .5s ease-in-out;
+            color: white;
+        }
+        
+        .registerForm fieldset input:focus {
+            outline: none;
+            border: 0;
+            border-bottom: 1px solid yellow;
+            width: 75%;
+        }
+        
+        #register {
+            justify-self: center;
+            grid-column: span 2;
+            color: white;
+            padding-top: 1em;
+        }
+        
+        .registerForm fieldset label {
+            padding-top: 1.5em;
+            padding-bottom: .9em;
+            color: white;
+        }
+        
+        select {
+            width: 70%;
+            background-color: transparent;
+        }
+        
+        .registerForm button {
+            justify-self: center;
+            grid-column: span 2;
+            width: 60%;
+            height: 50px;
+            margin-top: 1.5em;
+            background: linear-gradient(to top, rgb(20, 219, 20), green 50%, yellow);
+            outline: none;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            font-size: 1.5em;
+        }
+        
+        .registerForm button:hover {
+            background: linear-gradient(to bottom, rgb(20, 219, 20), green 50%, yellow);
+            outline: none;
+            border: none;
+        }
+        /* Styling for registration page ends*/
+        /* Styling for login page begins */
+        
+        .loginForm label {
+            display: block;
+            padding-top: 1em;
+            padding-bottom: .4em;
+            color: white;
+        }
+        
+        .loginForm>fieldset>input,
+        .loginForm>fieldset>textarea {
+            width: 95%;
+            resize: none;
+            padding-top: 1em;
+            background: transparent;
+            font-size: 1.3em;
+            color: white;
+        }
+        
+        .loginForm fieldset>input {
+            border: none;
+            border-bottom: 1px solid black;
+            margin-bottom: 1em;
+        }
+        
+        .loginForm>fieldset>h2 {
+            border: none;
+            text-align: center;
+            color: white;
+            padding: .6em 0;
+            ;
+        }
+        
+        .loginForm>fieldset>input:focus {
+            border: none;
+            border-bottom: 1px solid white;
+            border-top: none;
+            outline: none;
+        }
+        
+        .loginForm>fieldset>textarea:focus {
+            border: 1px solid white;
+            outline: none;
+            border-radius: 5px;
+        }
+        
+        .loginForm>fieldset {
+            border: 0;
+            box-shadow: 2px 2px 4px 1px grey;
+            border-radius: 10px;
+            background: linear-gradient(-45deg, rgb(23, 222, 23), green 50%, rgb(104, 104, 42));
+            background-color: rgb(9, 90, 9);
+            position: relative;
+            top: 2em;
+            padding: 0 2em 1em 2em;
+            height: 400px;
+        }
+        
+        .loginForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .general {
+            height: 50px;
+            width: 60%;
+            height: 50px;
+            background: linear-gradient(to top, rgb(20, 219, 20), green 50%, yellow);
+            outline: none;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            font-size: 1.5em;
+            text-align: center;
+            margin: 0 auto;
+            margin-left: 4em;
+            margin-top: 1em;
+        }
+        
+        .centered {
+            display: flex;
+            height: inherit;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Styling for login page starts page */
